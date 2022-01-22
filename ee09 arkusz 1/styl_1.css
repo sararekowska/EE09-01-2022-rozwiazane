@@ -1,0 +1,44 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  font-family: Georgia;
+}
+
+header {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  background-color: lightblue;
+  padding: 100px;
+}
+
+.footer-con {
+  display: flex;
+}
+
+.lewy {
+  background-color: dodgerblue;
+  color: white;
+  height: 220px;
+  width: 20%;
+}
+
+.srodek,
+.prawy {
+  background-color: dodgerblue;
+  color: white;
+  width: 40%;
+  height: 220px;
+  text-align: center;
+}
+
+a {
+  border: 1px dashed dimgray;
+  background-color: gold;
+  color: darkred;
+  padding: 10px;
+}
