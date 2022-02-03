@@ -1,108 +1,97 @@
 <html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="styl7.css">
-<title>galeria</title>
-</head>
-<body>
-<script>
-var licznik=0;
 
-function podmien(){
-	
-	licznik++;
-	
-	
-	if (licznik%2!=0)
-	{
-	document.getElementById("ikona").src="icon-on.png";
-	
-	console.log(licznik);
-	}
-	else
-	{
-	document.getElementById("ikona").src="icon-off.png";
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styl7.css">
+		<title>Galeria</title>
+	</head>
 
-	console.log(licznik);
-	}
-}
+	<body>
+		<script>
+		var licznik=0;
 
-function zmienZdjecie(zdjecie)
-{
+		function podmien(){
+			
+			licznik++;
+			
+			if (licznik%2!=0)
+			{
+				document.getElementById("ikona").src="icon-on.png";
+				console.log(licznik);
+			}
+			else
+			{
+				document.getElementById("ikona").src="icon-off.png";
+				console.log(licznik);
+			}
+		} 
 
-if(zdjecie=="lanzarotte")
-{
-document.getElementById("zdjecieglowne").src="lanzarotte.jpg";
-}
-else
+		function zmienZdjecie(zdjecie)
+		{
 
-if(zdjecie=="pekin")
-{
-document.getElementById("zdjecieglowne").src="pekin.jpg";
-}
-else
+			switch(zdjecie){
+				case "lanzarotte":
+					document.getElementById("zdjecieglowne").src="lanzarotte.jpg";
+					break;
 
-if(zdjecie=="serengeti")
-{
-document.getElementById("zdjecieglowne").src="serengeti.jpg";
-}
-else
-if(zdjecie=="tajlandia")
-{
-document.getElementById("zdjecieglowne").src="tajlandia.jpg";
-}
-else
-if(zdjecie=="wenecja")
-{
-document.getElementById("zdjecieglowne").src="wenecja.jpg";
-}
+				case "pekin":
+					document.getElementById("zdjecieglowne").src="pekin.jpg";
+					break;
+				
+				case "serengeti":
+					document.getElementById("zdjecieglowne").src="serengeti.jpg";
+					break;
+				
+				case "tajlandia":
+					document.getElementById("zdjecieglowne").src="tajlandia.jpg";
+					break;
 
-}
+				case "wenecja":
+					document.getElementById("zdjecieglowne").src="wenecja.jpg";
+					break;
 
+			}
+		}
+		</script>
 
-</script>
+		<div class="baner">
+			<h2>Galeria miejsc ciekawych</h2>
+		</div>
 
+		<div class="glowny">
+			<img id="zdjecieglowne" class="zdjglowne" src="lanzarotte.jpg" alt="galeria">
+		</div>
 
+		<div class="lewa">
+			<h3> Przeglądaj zdjęcia</h3>
+			<img onclick="zmienZdjecie('lanzarotte')" id="lanzarotte" class="zdjlewy" src="lanzarotte.jpg" alt="lanzarotte">
+			<img onclick="zmienZdjecie('pekin')" id="pekin" class="zdjlewy" src="pekin.jpg" alt="pekin">
+			<img onclick="zmienZdjecie('serengeti')"  id="serengeti" class="zdjlewy" src="serengeti.jpg" alt="serengeti">
+			<img onclick="zmienZdjecie('wenecja')" id="wenecja" class="zdjlewy" src="wenecja.jpg" alt="wenecja">
+			<img onclick="zmienZdjecie('tajlandia')" id="tajlandia" class="zdjlewy" src="tajlandia.jpg" alt="tajlandia">
+		</div>
 
+		<div class="prawa">
+			<h3>Obrazy w naszej galerii</h3>
 
-<div class="baner">
-<h2>Galeria miejsc ciekawych</h2>
-</div>
-<div class="glowny">
-<img id="zdjecieglowne" class="zdjglowne" src="lanzarotte.jpg" alt="galeria">
+			<table>
+			<tr>
+				<td>Europa</td><td>Azja</td><td>Afryka</td>
+			</tr>
+			<tr>
+				<td>2</td><td>2</td><td>1</td>
+			</tr>
+			</table>
 
-</div>
-<div class="lewa">
-<h3> Przeglądaj zdjęcia</h3>
-<img onclick="zmienZdjecie('lanzarotte')" id="lanzarotte" class="zdjlewy" src="lanzarotte.jpg" alt="lanzarotte">
-<img onclick="zmienZdjecie('pekin')" id="pekin" class="zdjlewy" src="pekin.jpg" alt="pekin">
-<img onclick="zmienZdjecie('serengeti')"  id="serengeti" class="zdjlewy" src="serengeti.jpg" alt="serengeti">
-<img onclick="zmienZdjecie('wenecja')" id="wenecja" class="zdjlewy" src="wenecja.jpg" alt="wenecja">
-<img onclick="zmienZdjecie('tajlandia')" id="tajlandia" class="zdjlewy" src="tajlandia.jpg" alt="tajlandia">
-</div>
-<div class="prawa">
-<h3>Obrazy w naszej galerii</h3>
+			<p>Polub nas
+			<img src="icon-off.png" alt="ikona" id="ikona" onclick="podmien()"></p><br>
+			
+			<a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+		</div>
 
-<table>
-<tr>
-	<td>Europa</td><td>Azja</td><td>Afryka</td>
-</tr>
-<tr>
-	<td>2</td><td>2</td><td>1</td>
-</tr>
-</table>
+		<div class="stopka">
+			Autor: 000000000
+		</div>
 
-<p>Polub nas
-<img src="icon-off.png" alt="ikona" id="ikona" onclick="podmien()"></p>
-<br>
-<a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
-</div>
-<div class="stopka">
-Autor: 000000000
-</div>
-
-
-
-
-<body>
+	<body>
 </html>
